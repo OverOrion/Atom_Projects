@@ -1,5 +1,5 @@
 name='bob'
 if name=='Alice':
-    print ('Hi, Alice.')
+    print('Hi, Alice.')
 else:
-    print ('Hello, stranger.')
+    print('Hello, stranger.')
