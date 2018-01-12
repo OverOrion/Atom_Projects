@@ -1,0 +1,85 @@
+# -*- coding: utf-8 -*-
+import sys
+from sys import *
+standardinput = list(map(int, stdin.readline().split()))
+# print(standardinput)
+hours = int(standardinput[0])
+minutes = int(standardinput[1])
+
+if hours in range(1,25,1) and minutes in range(0,46,15):
+    if hours == 11 and minutes == 45:
+        sys.stdout.write('a quarter to twelve a.m.')
+        exit()
+    if hours == 23 and minutes == 45:
+        sys.stdout.write('a quarter to twelve p.m.')
+        exit()
+    if minutes in range(15,31):
+        if minutes == 15:
+            sys.stdout.write('a quarter past ')
+        elif minutes == 30:
+            sys.stdout.write('half past ')
+    elif minutes == 45:
+        sys.stdout.write('a quarter to ')
+        hours = hours + 1
+    if hours in range(1,11,1):
+        if hours == 1:
+            sys.stdout.write('one')
+        elif hours == 2:
+            sys.stdout.write('two')
+        elif hours == 3:
+            sys.stdout.write('three')
+        elif hours == 4:
+            sys.stdout.write('four')
+        elif hours == 5:
+            sys.stdout.write('five')
+        elif hours == 6:
+            sys.stdout.write('six')
+        elif hours == 7:
+            sys.stdout.write('seven')
+        elif hours == 8:
+            sys.stdout.write('eight')
+        elif hours == 9:
+            sys.stdout.write('nine')
+        elif hours == 10:
+            sys.stdout.write('ten')
+        elif hours == 11:
+            sys.stdout.write('eleven')
+        if minutes != 00 or 0:
+           sys.stdout.write(' a.m.')
+        elif minutes == 00 or 0:
+            sys.stdout.write(" o' clock")
+            sys.stdout.write(' a.m.')
+    elif hours in range(12,24,1):
+        if hours == 12:
+            sys.stdout.write('twelve')
+        elif hours == 13:
+            sys.stdout.write('one')
+        elif hours == 14:
+            sys.stdout.write('two')
+        elif hours == 15:
+            sys.stdout.write('three')
+        elif hours == 16:
+            sys.stdout.write('four')
+        elif hours == 17:
+            sys.stdout.write('five')
+        elif hours == 18:
+            sys.stdout.write('six')
+        elif hours == 19:
+            sys.stdout.write('seven')
+        elif hours == 20:
+            sys.stdout.write('eight')
+        elif hours == 21:
+            sys.stdout.write('nine')
+        elif hours == 22:
+            sys.stdout.write('ten')
+        elif hours == 23:
+            sys.stdout.write('eleven')
+        elif hours == 24:
+            sys.stdout.write('twelve')
+        if minutes != 00 or 0:
+            sys.stdout.write(' p.m.')
+        elif minutes == 00 or 0:
+            sys.stdout.write(" o' clock")
+            sys.stdout.write(' p.m.')
+else:
+    sys.stdout.write("Érvénytelen formátum, a helyes formátum ÓÓ PP! Invalid format, the correct format is HH MM. ")
